@@ -1,0 +1,59 @@
+<?php
+/**
+ * @var $block BoonMarket\Sec6SlWidget\Block\Widget\Sec6SlBlock
+ */
+?>
+
+<section class="section6">
+    <div class="section6__slider swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="section6__slider__slide">
+                    <img src="<?= $block->getFirstSlImage() ?>" alt="" class="section6__slider__slide__img">
+                    <div class="section6__slider__slide__info">
+                        <div class="section6__slider__slide__title"><?= $block->getFirstSlTitle() ?></div>
+                        <div class="section6__slider__slide__description"><?= $block->getFirstSlDescription() ?></div>
+                        <a href="#shop" class="section6__slider__slide__read"><?= $block->getFirstSlReadMore() ?></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="section6__slider__slide">
+                    <img src="<?= $block->getSecondSlImage() ?>" alt="" class="section6__slider__slide__img">
+                    <div class="section6__slider__slide__info">
+                        <div class="section6__slider__slide__title"><?= $block->getSecondSlTitle() ?></div>
+                        <div class="section6__slider__slide__description"><?= $block->getSecondSlDescription() ?></div>
+                        <a href="#shop" class="section6__slider__slide__read"><?= $block->getSecondSlReadMore() ?></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="section6__slider__slide">
+                    <img src="<?= $block->getThirdSlImage() ?>" alt="" class="section6__slider__slide__img">
+                    <div class="section6__slider__slide__info">
+                        <div class="section6__slider__slide__title"><?= $block->getThirdSlTitle() ?></div>
+                        <div class="section6__slider__slide__description"><?= $block->getThirdSlDescription() ?></div>
+                        <a href="#shop" class="section6__slider__slide__read"><?= $block->getThirdSlReadMore() ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<script>
+    require([
+        'jquery',
+        'swiperSlider'
+    ], function($, Swiper) {
+        var swiper = new Swiper('.section6__slider', {
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    });
+</script>
