@@ -36,11 +36,13 @@ use Magento\Framework\App\Action\Action;
                 foreach ($products as $product):
                     ?>
                     <div class="section4__products__product swiper-slide">
-                        <div class="section4__products__product__image">
-                            <img loading="lazy" src="<?= $block->getProductImageUrl($product->getId()) ?>" alt="">
-                        </div>
-                        <div class="section4__products__product__title"><?= $product->getName() ?></div>
-                        <div class="section4__products__product__description"><?= $product->getShortDescription() ?></div>
+                        <a href="<?= $product->getProductUrl(); ?>">
+                            <div class="section4__products__product__image">
+                                <img loading="lazy" src="<?= $block->getProductImageUrl($product->getId()) ?>" alt="">
+                            </div>
+                            <div class="section4__products__product__title"><?= $product->getName() ?></div>
+                            <div class="section4__products__product__description"><?= $product->getShortDescription() ?></div>
+                        </a>
                         <div class="section4__products__product__price_addbag">
                             <div class="section4__products__product__addbag">
                                 <div class="actions-primary">
